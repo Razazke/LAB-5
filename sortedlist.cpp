@@ -26,7 +26,7 @@ Name: Dylan English
 Assignment: LAB 5
 Purpose:
 ***********************************************************/
-#include <iostream>
+#include "sortedlist.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
