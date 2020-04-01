@@ -4,15 +4,15 @@ Assignment: LAB 5
 Purpose:
 ***********************************************************/
 
-#ifndef LAB5_SORTEDLINKEDLISTG_H
-#define LAB5_SORTEDLINKEDLISTG_H
+#ifndef LAB5_SORTEDLINKEDLIST_H
+#define LAB5_SORTEDLINKEDLIST_H
 
 #include "SortedListInterface.h"
 #include "Node.h"
 #include <memory>
 
 template<class ItemType>
-class SortedLinkedList : SortedListInterface<ItemType>
+class SortedLinkedList : public SortedListInterface<ItemType>
 {
     int size;
     std::shared_ptr<Node> headPtr;
@@ -22,11 +22,12 @@ public:
     ~SortedLinkedList();
     bool insertSorted(const ItemType&);
     bool removeSorted(const ItemType&);
-    int getPosition(const ItemType&);
-    bool isEmpty();
-    int getLength();
+    int getPosition(const ItemType&) const;
+    bool isEmpty() const;
+    int getLength() const;
     bool remove(int);
-    ItemType getEntry(int);
+    ItemType getEntry(int) const;
+    void clear();
 
 };
 

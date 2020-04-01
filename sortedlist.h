@@ -6,4 +6,5 @@
 #define LAB5_SORTEDLIST_H
 
 #include <iostream>
+#include "SortedLinkedList.h"
 #endif //LAB5_SORTEDLIST_H
