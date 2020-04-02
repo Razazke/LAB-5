@@ -63,6 +63,6 @@ public:
     virtual ItemType getEntry(int position) const = 0;
 
     /** Destroys object and frees memory allocated by object. */
-    virtual ~SortedListInterface() { }
+    virtual ~SortedListInterface() = default;
 }; // end SortedListInterface
 #endif

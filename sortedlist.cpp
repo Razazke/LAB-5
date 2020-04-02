@@ -30,6 +30,6 @@ Purpose:
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    SortedLinkedList<int> SortedList;
+    auto* SortedList = new SortedLinkedList<int>();
     return 0;
 }
