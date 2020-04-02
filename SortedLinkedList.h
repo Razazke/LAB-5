@@ -12,7 +12,7 @@ Purpose:
 #include <memory>
 
 template<class ItemType>
-class SortedLinkedList : public SortedListInterface<ItemType>
+class SortedLinkedList : SortedListInterface<ItemType>
 {
     int size;
     std::shared_ptr<Node> headPtr;
