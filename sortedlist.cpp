@@ -29,7 +29,9 @@ Purpose:
 #include "sortedlist.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
     auto* SortedList = new SortedLinkedList<int>();
+    std::cout << "Hello World!" << std::endl; // does not print...
+    SortedList->insertSorted(6);
     return 0;
 }
