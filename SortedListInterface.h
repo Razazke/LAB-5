@@ -14,13 +14,15 @@ template<class ItemType>
 class SortedListInterface
 {
 public:
+
+    virtual bool insertSorted(const ItemType& newEntry) = 0;
     /** Inserts an entry into this sorted list in its proper order
         so that the list remains sorted.
      @pre  None.
      @post  newEntry is in the list, and the list is sorted.
      @param newEntry  The entry to insert into the sorted list. */
-    virtual bool insertSorted(const ItemType& newEntry) = 0;
 
+    virtual bool removeSorted(const ItemType& anEntry) = 0;
     /** Removes the first or only occurrence of the given entry from this
         sorted list.
      @pre  None.
@@ -30,8 +32,9 @@ public:
         returned value is false.
      @param anEntry  The entry to remove.
      @return  True if removal is successful, or false if not. */
-    virtual bool removeSorted(const ItemType& anEntry) = 0;
 
+
+    virtual int getPosition(const ItemType& anEntry) const = 0;
     /** Gets the position of the first or only occurrence of the given
         entry in this sorted list. In case the entry is not in the list,
         determines where it should be if it were added to the list.
@@ -42,27 +45,29 @@ public:
      @return  Either the position of the given entry, if it occurs in the
         sorted list, or the position where the entry would occur, but as a
         negative integer. */
-    virtual int getPosition(const ItemType& anEntry) const = 0;
 
     // The following methods are the same as those given in ListInterface
     // in Listing 8-1 of Chapter 8 and are completely specified there.
 
-    /** Sees whether this list is empty. */
+
     virtual bool isEmpty() const = 0;
+    /** Sees whether this list is empty. */
 
-    /** Gets the current number of entries in this list. */
     virtual int getLength() const = 0;
+    /** Gets the current number of entries in this list. */
 
-    /** Removes the entry at a given position from this list. */
+
     virtual bool remove(int position) = 0;
+    /** Removes the entry at a given position from this list. */
 
-    /** Removes all entries from this list. */
+
     virtual void clear() = 0;
+    /** Removes all entries from this list. */
 
-    /** Gets the entry at the given position in this list. */
     virtual ItemType getEntry(int position) const = 0;
+    /** Gets the entry at the given position in this list. */
 
-    /** Destroys object and frees memory allocated by object. */
     virtual ~SortedListInterface() = default;
+    /** Destroys object and frees memory allocated by object. */
 }; // end SortedListInterface
 #endif
