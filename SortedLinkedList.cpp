@@ -12,7 +12,9 @@ int SortedLinkedList<ItemType>::getPosition(const ItemType &anEntry) const {
 }
 
 template<typename ItemType>
-SortedLinkedList<ItemType>::SortedLinkedList() {
+SortedLinkedList<ItemType>::SortedLinkedList()
+{
+    headPtr->setNext(nullptr);
 }
 
 template<typename ItemType>
@@ -21,7 +23,22 @@ SortedLinkedList<ItemType>::~SortedLinkedList() {
 }
 
 template<typename ItemType>
-bool SortedLinkedList<ItemType>::insertSorted(const ItemType & anEntry) {
+bool SortedLinkedList<ItemType>::insertSorted(const ItemType & anEntry)
+{
+    if(headPtr->getNext() == nullptr)
+    {
+        Node* NewNode = new Node(anEntry);
+        headPtr->setNext(NewNode);
+    }
+    else{
+
+    }
+    /** Inserts an entry into this sorted list in its proper order
+        so that the list remains sorted.
+     @pre  None.
+     @post  newEntry is in the list, and the list is sorted.
+     @param newEntry  The entry to insert into the sorted list. */
+
     return false;
 }
 
