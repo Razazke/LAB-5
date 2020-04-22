@@ -11,12 +11,12 @@ Purpose:
 #include <string>
 class Node
 {
-    char data;
+    int data;
     Node* nextNode;
 public:
     Node();
-    Node(const char&);
-    Node(const char&, Node* nextNodePtr);
+    Node(const int&);
+    Node(const int&, Node* nextNodePtr);
     Node* getNext();
     void setNext(Node*);
     char getData();

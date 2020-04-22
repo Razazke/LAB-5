@@ -10,13 +10,13 @@ Node::Node()
     data = 0;
     nextNode = nullptr;
 }
-Node::Node(const char& str)
+Node::Node(const int& str)
 {
     data = str;
     nextNode = nullptr;
 }
 
-Node::Node(const char& str, Node* nextNodePtr)
+Node::Node(const int& str, Node* nextNodePtr)
 {
     data = str;
     nextNode = nextNodePtr;
