@@ -62,12 +62,12 @@ bool SortedLinkedList<ItemType>::removeSorted(const ItemType & anEntry) {
 
 template<typename ItemType>
 bool SortedLinkedList<ItemType>::isEmpty() const {
-    return false;
+    return size==0;
 }
 
 template<typename ItemType>
 int SortedLinkedList<ItemType>::getLength() const {
-    return 0;
+    return size;
 }
 
 template<typename ItemType>
