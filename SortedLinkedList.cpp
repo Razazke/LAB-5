@@ -7,8 +7,20 @@ Purpose:
 #include "SortedLinkedList.h"
 
 template<typename ItemType>
-int SortedLinkedList<ItemType>::getPosition(const ItemType &anEntry) const {
-    return 0;
+int SortedLinkedList<ItemType>::getPosition(const ItemType &anEntry) const
+{
+    int iter = 1;
+    Node* curPtr = headPtr->getNext();
+    while(curPtr != nullptr)
+    {
+        if (anEntry == curPtr->getData())
+        {
+            return iter;
+        }
+                curPtr=curPtr->getNext();
+                iter++;
+    }
+    return -1; // reach here when the entry is not in the list
 }
 
 template<typename ItemType>
