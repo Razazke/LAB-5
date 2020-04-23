@@ -76,8 +76,23 @@ bool SortedLinkedList<ItemType>::remove(int position) {
 }
 
 template<typename ItemType>
-ItemType SortedLinkedList<ItemType>::getEntry(int position) const {
-    return position;
+ItemType SortedLinkedList<ItemType>::getEntry(int position) const
+{
+    if(position == 0)
+    {
+        return headPtr->getNext()->getData();
+    }
+    else
+        {
+            Node* curPtr = headPtr->getNext();
+        int iter = 1;
+        while(position != iter)
+        {
+            curPtr = curPtr->getNext();
+            iter++;
+        }
+            return curPtr->getData();
+    }
 }
 
 template<typename ItemType>
