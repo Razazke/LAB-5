@@ -33,5 +33,8 @@ int main() {
     auto* SortedList = new SortedLinkedList<int>();
     std::cout << "Hello World!" << std::endl; // does not print...
     SortedList->insertSorted(6);
+    //SortedList->insertSorted(17);
+    std::cout << SortedList->getEntry(1) << std::endl;
+    std::cout << SortedList->getLength() << std::endl;
     return 0;
 }
