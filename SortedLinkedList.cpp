@@ -26,7 +26,9 @@ int SortedLinkedList<ItemType>::getPosition(const ItemType &anEntry) const
 template<typename ItemType>
 SortedLinkedList<ItemType>::SortedLinkedList()
 {
-    headPtr->setNext(nullptr);
+        Node* NewNode = new Node();
+        headPtr = NewNode;
+        size = 0;
 }
 
 template<typename ItemType>
