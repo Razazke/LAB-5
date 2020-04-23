@@ -15,7 +15,8 @@ template<class ItemType>
 class SortedLinkedList : SortedListInterface<ItemType>
 {
     int size;
-    std::shared_ptr<Node> headPtr;
+    //std::shared_ptr<Node> headPtr;
+    Node* headPtr;
 
 public:
     SortedLinkedList();
