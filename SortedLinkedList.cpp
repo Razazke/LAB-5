@@ -39,21 +39,20 @@ SortedLinkedList<ItemType>::~SortedLinkedList() {
 template<typename ItemType>
 bool SortedLinkedList<ItemType>::insertSorted(const ItemType & anEntry)
 {
-    if(headPtr->getNext() == nullptr)
-    {
-        Node* NewNode = new Node(anEntry);
-        headPtr->setNext(NewNode);
-    }
-    else{
-
-    }
     /** Inserts an entry into this sorted list in its proper order
         so that the list remains sorted.
      @pre  None.
      @post  newEntry is in the list, and the list is sorted.
      @param newEntry  The entry to insert into the sorted list. */
-
-    return false;
+    Node* newNode = new Node(anEntry); //node to be inserted
+    Node *curPtr = headPtr;
+    if(curPtr->getNext()== nullptr)
+    {
+        headPtr->setNext(newNode);
+        curPtr = headPtr->getNext();
+    }
+    size++;
+    return 0;
 }
 
 template<typename ItemType>
